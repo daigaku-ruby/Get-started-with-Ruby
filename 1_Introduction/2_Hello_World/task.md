@@ -1,5 +1,12 @@
 # Say Hello World in Ruby
 
+---
+
+*You will learn:*
+- how to print to the standard otuput
+
+---
+
 In Ruby you can print to the standard output by using the *print* method.
 If you want to print a new line you can use the *puts* (or the shorter *p*)
 method.
@@ -14,10 +21,10 @@ and turns them into a String before printing to the the standard output
 The two *''* declare a Ruby String object. You can also use *""* to create a
 String. We will discuss the difference of *''* and *""* later on.
 
-## For now, let's do the Hello World example in Ruby:
+For now, let's do the Hello World example in Ruby:
 
 -----
 
-Print out *Hello* *World* to the standard output!
+Print out *Hello World* to the standard output!
 
 -----

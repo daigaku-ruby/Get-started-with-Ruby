@@ -76,7 +76,8 @@ Read more about Complex here: (ruby-doc core: Complex).
 
 ---
 
-Create some numbers of the different described types in the interactive Ruby console
-(`irb`) and press *v* to mark this unit green if you are done!
+Create a number of each described type and store it into a variable with the
+lowercased name of the number's class (e.g. *rational* for Rational).
+Create both types of Integers (*Fixnum* and *Bignum*)!
 
 ---

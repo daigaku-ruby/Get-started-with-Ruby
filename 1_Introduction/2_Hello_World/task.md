@@ -3,7 +3,7 @@
 ---
 
 *You will learn:*
-- how to print to the standard otuput
+- how to print to the standard output
 
 ---
 
@@ -12,8 +12,7 @@ If you want to print a new line you can use the *puts* (or the shorter *p*)
 method.
 
 *print* and *puts* take one or multiple comma-separated objects as parameter
-and turns them into a String before printing to the the standard output
-*$stdout*.
+and turn them into a String before printing to the the standard output *$stdout*.
 
 `print 'a'` just prints out *a*.
 `print 'a', 'b', 'c'` prints out *abc*.

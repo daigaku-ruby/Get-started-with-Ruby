@@ -69,6 +69,4 @@ Set the following variables:
 `  language`        to the string *'Ruby'* and
 `  learned`         to the boolean *true*
 
-and print out each variable's value by using the *puts* method!
-
 ---

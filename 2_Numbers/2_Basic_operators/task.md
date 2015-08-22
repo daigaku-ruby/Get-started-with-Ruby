@@ -21,7 +21,7 @@ You can apply these arithmetic operators by writing one of them between two
 numbers, e.g.:
 
 `  3.2 + 7`                              # => 10.2
-`  Rational(2, 3) - Rational(1, 2)`      # =>  (1/6)
+`  Rational(2, 3) - Rational(1, 2)`      # => (1/6)
 `  3 \* 5`                                # => 15
 `  Complex(2.0, 4) / Complex(4.0, 2.0)`  # => (0.8+0.6000000000000001i)
 `  2 \*\* 3`                               # => 8
@@ -53,14 +53,14 @@ http://docs.sun.com/source/806-3568/ncg_goldberg.html!)
 
 This binary representation of *Floats* is also the explanation for the inaccuracy
 when calculating the division of two *Complex* numbers (as in the example above,
-where the maginary part is *0.6000000000000001* instead of *0.6*).
+where the imaginary part is *0.6000000000000001* instead of *0.6*).
 
 ---
 
 Connect numbers by each of the learned operators:
 
 1. Sum up two *Rational* numbers
-2. Subtract a *Float* from an *Bignum*
+2. Subtract a *Float* from a *Bignum*
 3. Build the product of three *Float* numbers
 4. Divide a *Complex* number by a *Fixnum*
 5. Calculate a *Rational* to the power of a *Float*

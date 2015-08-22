@@ -1,40 +1,56 @@
 require 'rspec'
+require 'rspec/expectations'
+
+# requires code_breaker gem to be installed
+# (https://github.com/daigaku-ruby/code_breaker)
+require 'code_breaker'
+
+RSpec::Matchers.define :run_number_operations do |expected|
+  match do |actual|
+    lines = actual.split("\n").compact.map(&:strip).reject(&:empty?)
+    called_operations(lines).include?(expected)
+  end
+
+  def called_operations(lines)
+    lines.map do |line|
+      CodeBreaker.parse(line)
+    end
+  end
+
+  failure_message do |actual|
+    %Q{Your code doesn't run the number operation "#{expected.join(' ')}".}
+  end
+end
+
+OPERATIONS = {
+  sum:        [Rational, :+, Rational],
+  difference: [Bignum, :-, Float],
+  product:    [Float, :*, Float, :*, Float],
+  quotient:   [Complex, :/, Float],
+  power:      [Rational, :**, Float]
+}.freeze
 
 describe "Your code" do
   [['solution::code']]
 
-  sum = Rational(1, 2) + Rational(2, 4)
-  difference = 100_000_000_000_000 - 2500.25
-  product = 1.578 + 2.7 + 0.42
-  quotient = Complex(3.5, 5.25) / 8.75
-  power = Rational(11/13) ** 11.13
-
-
-  {
-    sum: [Rational, Rational, :+],
-    difference: [Bignum, Float, :-],
-    product: [Float, Float, Float, :*],
-    quotient: [Complex, Float, :/],
-    power: [Rational, Float, :**]
-  }.each do |operation, values|
+  OPERATIONS.each do |operation, values|
     it "defines a variable with name \"#{operation}\"" do
       expect(local_variables.include?(operation)).to be true
     end
 
     if local_variables.include?(operation)
-      same_operants = (values[0..-2].uniq.count == 1)
+      operants  = values.select.each_with_index { |_, i| i.even? }
+      same_operants = (operants.uniq.count == 1)
 
-      class_list = if same_operants
-        "#{values[0..-2].count} #{values.first} numbers"
+      numbers = if same_operants
+        "#{operants.count} #{values.first} numbers"
       else
-        values[0..-2].join(' and a ')
+        operants.join(' and a ')
       end
 
-      it "calculates the #{operation} of #{class_list}" do
-        expect_any_instance_of(values.first)
-          .to receive(values.last).exactly(values.count - 2).times
-
-        [['solution::code']]
+      it "calculates the #{operation} of #{numbers}" do
+        code_lines = %Q{ [['solution::code']] }
+        expect(code_lines).to run_number_operations(values)
       end
     end
   end

@@ -20,11 +20,11 @@ share the following basic operator methods:
 You can apply these arithmetic operators by writing one of them between two
 numbers, e.g.:
 
-`  3.2 + 7`                              # => 10.2
-`  Rational(2, 3) - Rational(1, 2)`      # => (1/6)
-`  3 \* 5`                                # => 15
-`  Complex(2.0, 4) / Complex(4.0, 2.0)`  # => (0.8+0.6000000000000001i)
-`  2 \*\* 3`                               # => 8
+`  3.2 + 7`                              *# => 10.2*
+`  Rational(2, 3) - Rational(1, 2)`      *# => (1/6)*
+`  3 \* 5`                                *# => 15*
+`  Complex(2.0, 4) / Complex(4.0, 2.0)`  *# => (0.8+0.6000000000000001i)*
+`  2 \*\* 3`                               *# => 8*
 
 ## "Strange" behaviours
 
@@ -40,9 +40,9 @@ down *Integer* value (`5 / 2` equals *2*, `7 / 2` equals *3*).
 To get a floating point number you have to use a *Float* for either the numerator
 or the denominator or for both of them, i.e.:
 
-`  3.0 / 7`   # => 0.42857142857142855
-`  3 / 7.0`   # => 0.42857142857142855
-`  3.0 / 7.0` # => 0.42857142857142855
+`  3.0 / 7`   *# => 0.42857142857142855*
+`  3 / 7.0`   *# => 0.42857142857142855*
+`  3.0 / 7.0` *# => 0.42857142857142855*
 
 The inaccuracy when summing up *Floats* appears beacause a *Float* is an approximation
 of a decimal number. Since floating point numbers are stored in binary in your

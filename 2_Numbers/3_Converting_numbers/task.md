@@ -29,11 +29,11 @@ Note that the size of the fraction doesn't matter:
 `  2.01.to_i` and `2.95.to_i` will both return *2*.
 
 If you want to convert a float to an integer based on its digits after the decimal point,
-you should have a look at the `#floor`, `#ceil`, and `#round` methods of a Numeric:
+you should have a look at the following methods of a Numeric:
 
--  (ruby-doc core: Numeric#ceil)
--  (ruby-doc core: Numeric#floor)
--  (ruby-doc core: Numeric#round)
+`  #ceils`: (ruby-doc core: Numeric#ceil)
+`  #floor`: (ruby-doc core: Numeric#floor)
+`  #round`: (ruby-doc core: Numeric#round)
 
 One thing you can't do is converting a Complex number with an imaginary part other
 than `0` to an integer, float, or rational number.
@@ -54,3 +54,5 @@ Store each result in a variable that is named like the resulting type of the con
 for 1. *integer*,
 for 2. *float*,
 and so on.
+
+---

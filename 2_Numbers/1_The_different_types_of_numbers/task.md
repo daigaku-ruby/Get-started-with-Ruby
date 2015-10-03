@@ -21,8 +21,8 @@ perfectly the same as `2000`.
 
 Another way to create an Integer is by calling `Integer()` with a parameter, e.g.:
 
-`  Integer(3)`   # => 3
-`  Integer('3')` # => 3
+`  Integer(3)`   *# => 3*
+`  Integer('3')` *# => 3*
 
 Internally, Ruby uses two different classes for Integers. Dependent on how big the
 Integer is it uses a *Fixnum* or a *Bignum*. You don't have to worry about which class to
@@ -32,8 +32,8 @@ However, you can check which class Ruby uses for your number by calling the `cla
 method on your number. Open a new terminal tab and open the interactive Ruby console
 with `irb`. Then check the class of different numbers:
 
-`  1000.class`                      # => *Fixnum*
-`  4_611_686_018_427_387_904.class` # => *Bignum*
+`  1000.class`                      *# => Fixnum*
+`  4_611_686_018_427_387_904.class` *# => Bignum*
 
 If you want to learn more, read about Fixnum and Bignum here:
 - http://patshaughnessy.net/2014/1/9/how-big-is-a-bignum
@@ -46,8 +46,8 @@ You can create a Float by declaring a number with a decimal place, like `3.0`
 or `-2_000.25`.
 Another way to create a Float is to call `Float()` with a parameter, e.g.:
 
-`  Float(3)`   # => 3.0
-`  Float('3')` # => 3.0
+`  Float(3)`   *# => 3.0*
+`  Float('3')` *# => 3.0*
 
 Read more about Float here: (ruby-doc core: Float).
 
@@ -56,9 +56,9 @@ Read more about Float here: (ruby-doc core: Float).
 A *Rational* represents a rational number (a paired integer number a/b, where b > 0).
 You can create a Rational by calling `Rational()` with one or two parameters, e.g.:
 
-`  Rational(2)`     # => *(2/1)*
-`  Rational(2, 3)`  # => *(2/3)*
-`  Rarional('2/3')` # => *(2/3)*
+`  Rational(2)`     *# => (2/1)*
+`  Rational(2, 3)`  *# => (2/3)*
+`  Rarional('2/3')` *# => (2/3)*
 
 Read more about Rational here: (ruby-doc core: Rational).
 
@@ -67,10 +67,10 @@ Read more about Rational here: (ruby-doc core: Rational).
 A *Complex* represents a complex number.
 You can create a complex number by calling `Complex()` with one or two parameters, e.g.:
 
-`  Complex(2)`          # => *(2+0i)*
-`  Complex(2.1, 0.2)`   # => *(2.1+0.2i)*
-`  Complex('2.1+0.2i')` # => *(2.1+0.2i)*
-`  Complex('2.1@0.2')`  # => *(2.0581398134666076+0.4172055946696286i)* - polar form
+`  Complex(2)`          *# => (2+0i)*
+`  Complex(2.1, 0.2)`   *# => (2.1+0.2i)*
+`  Complex('2.1+0.2i')` *# => (2.1+0.2i)*
+`  Complex('2.1@0.2')`  *# => (2.0581398134666076+0.4172055946696286i)* - polar form
 
 Read more about Complex here: (ruby-doc core: Complex).
 

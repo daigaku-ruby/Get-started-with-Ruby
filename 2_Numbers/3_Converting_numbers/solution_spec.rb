@@ -1,8 +1,5 @@
 require 'rspec'
 require 'rspec/expectations'
-
-# requires code_breaker gem to be installed
-# (https://github.com/daigaku-ruby/code_breaker)
 require 'code_breaker'
 
 RSpec::Matchers.define :run_number_conversions do |expected|
@@ -14,14 +11,7 @@ RSpec::Matchers.define :run_number_conversions do |expected|
   }
 
   match do |actual|
-    lines = actual.split("\n").compact.map(&:strip).reject(&:empty?)
-    called_conversions(lines).include?(expected)
-  end
-
-  def called_conversions(lines)
-    lines.map { |line|
-      CodeBreaker.parse(line) unless line.start_with?('#')
-    }.compact
+    CodeBreaker.parse(actual).include?(expected)
   end
 
   failure_message do |actual|

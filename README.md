@@ -4,6 +4,8 @@ This is the initial course for [Daigaku](https://github.com/daigaku-ruby/daigaku
 
 ## Contributing
 
+This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant code of conduct](http://contributor-covenant.org/version/1/2/0).
+
 Daigaku is only helpful for learning Ruby if there are some awesome courses available.
 Hence, we like to encourage you to improve the available contents and add chapters and units to this course.
 

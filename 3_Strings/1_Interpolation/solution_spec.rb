@@ -42,6 +42,7 @@ RSpec::Matchers.define :run_string_interpolation do |expected|
     interpolation.first
   end
 end
+
 describe "Your code" do
   [['solution::code']]
 

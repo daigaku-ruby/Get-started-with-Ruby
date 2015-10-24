@@ -44,6 +44,7 @@ If you want to learn more, read about Fixnum and Bignum here:
 A *Float* represents an *inexact real number*.
 You can create a Float by declaring a number with a decimal place, like `3.0`
 or `-2_000.25`.
+
 Another way to create a Float is to call `Float()` with a parameter, e.g.:
 
 `  Float(3)`   *# => 3.0*
@@ -58,7 +59,7 @@ You can create a Rational by calling `Rational()` with one or two parameters, e.
 
 `  Rational(2)`     *# => (2/1)*
 `  Rational(2, 3)`  *# => (2/3)*
-`  Rarional('2/3')` *# => (2/3)*
+`  Rational('2/3')` *# => (2/3)*
 
 Read more about Rational here: (ruby-doc core: Rational).
 

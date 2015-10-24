@@ -4,10 +4,11 @@ describe "Your code" do
   [['solution::code']]
 
   {
-    fixnum: Fixnum,
-    bignum: Bignum,
+    fixnum:   Fixnum,
+    bignum:   Bignum,
+    float:    Float,
     rational: Rational,
-    complex: Complex
+    complex:  Complex
   }.each do |variable, class_name|
     it "defines a variable with name \"#{variable}\"" do
       expect(local_variables.include?(variable)).to be true

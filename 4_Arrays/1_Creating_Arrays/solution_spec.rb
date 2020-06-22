@@ -66,7 +66,7 @@ describe 'Your code' do
           expect(@values.include?(Float)).to be true
         end
 
-        it 'holdd a Boolean' do
+        it 'holds a Boolean' do
           included = @values.include?(TrueClass) || @values.include?(FalseClass)
           expect(included).to be true
         end

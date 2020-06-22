@@ -16,14 +16,14 @@ This unit will look into different ways of adding elements to an Array.
 
 ## Adding elements to the end of an Array
 
-An Array instance has several methods for adding elements.
+An Array object has several methods for adding elements.
 If you want to add a *single* element to the end you can use the `<<` method:
 
 `  numbers = [1, 2, 3]`
 `  numbers << 4`              *# => [1, 2, 3, 4]*
 
 You could also write `numbers.<<(4)`, so the missing *.* and *()* are just a bit of
-syntactical sugar.
+syntactic sugar.
 
 A similiar method for adding an element to the end of an Array is `push`:
 
@@ -35,13 +35,14 @@ many elements as you want in a single call:
 
 `  chars.push('d', 'e', 'f')` *# => ['a', 'b', 'c', 'd', 'e', 'f']*
 
-Both `<<` and `push` will modify the given Array directly. If you check the values
-of the variables above after calling the methods on them they will contain the added values:
+Both `<<` and `push` will modify the given Array directly. If you check the values of 
+the variables above after calling the `<<` or `push` methods they will contain the 
+added values:
 
 `  numbers`                   *# => [1, 2, 3, 4] *
 `  chars`                     *# => ['a', 'b', 'c', 'd', 'e', 'f']*
 
-If you want to build a new Array out of an existing one by adding elements, the `+` method
+If you want to build a new Array from an existing one by adding elements, the `+` method
 will help you to combine two Arrays:
 
 `  numbers = [1, 2]`
@@ -56,7 +57,7 @@ The original Array will stay the same:
 ## Adding elements to the beginning of an Array
 
 If you want to add elements to the beginning of an Array instead, you can use the
-`unshift` method which takes 1 or more elements to add as arguments:
+`unshift` method which takes one or more elements to add as arguments:
 
 `  numbers = [1, 2]`
 `  numbers.unshift(0)`        *# => [0, 1, 2]*
@@ -81,7 +82,7 @@ all the values now:
 
 `  vegetables` *# => ['potato', 'cucumber', 'cauliflower', 'pepper']
 
-Now that you have learned a couple of possibilities for adding elements to an Array
+Now that you have learned various methods for adding elements to an Array,
 let’s summarize them again:
 
 `  <<`      *adds element at end           modifies the original Array*
